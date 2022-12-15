@@ -32,5 +32,13 @@ public class Installment {
     }
 
 
+    @Override
+    public String toString() {
+        return "{" +
+            " date='" + getDate() + "'" +
+            ", amount='" + getAmount() + "'" +
+            "}";
+    }
+
     
 }

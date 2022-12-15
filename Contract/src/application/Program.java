@@ -5,9 +5,14 @@ import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
 import entities.Contract;
+import entities.Installment;
+import services.ContractService;
 
 public class Program{
 
+    /**
+     * @param args
+     */
     public static void main (String[] args){
         Scanner sc = new Scanner (System.in);
 
@@ -26,6 +31,13 @@ public class Program{
 
         System.out.print("Enter number of Installments:  ");
         int n = sc.nextInt();
+        ContractService contractService = new ContractService(null);
+
+        ContractService.processContract(contract,n);
+        System.out.println("Payments: ");
+        for (Installment installment : contract.getInstallments()){
+            System.out.println(installment);
+        }
         
 
         

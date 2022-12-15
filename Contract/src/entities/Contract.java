@@ -11,7 +11,7 @@ public class Contract {
 
     private List<Installment> installments = new ArrayList<>();
 
-}
+
 public Contract(){
 
 }
@@ -48,9 +48,15 @@ public Contract(){
         this.totalValue = totalValue;
     }
 
-    public List<Installment> getInstallments() {
+    /**
+     * @return
+     */
+    public List<Installment> getInstallments(){
         return this.installments;
     }
+}
+
+
 
     
     
